@@ -24,6 +24,60 @@ body {
 
 /* Buttons */
 
+.btn2{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center
+  width: 200px;
+  padding: 20px 25px;
+  border-radius: 50px;
+  background: #f5efff;
+  box-shadow: 1px 1px 20px 1px #f5efff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: transform 0.1s;
+  overflow: hidden;
+}
+
+.btn2 span{
+ position: relative;
+ pointer-events: none;
+ color: #7371fc;
+ transition: 0.5s;
+}
+
+
+.btn2:hover span{
+  color: #f5efff;
+}
+
+.btn2::before{
+  content: '';
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  transform: translate(-50%,-50%);
+  background: var(--clr);
+  width: 0;
+  height: 0;
+  border-radius: 50px;
+  transition: 0.8s, left 0s, top 0s;
+}
+
+.btn2:hover::before{
+    width: 300px;
+    height: 300px;
+}
+
+
+
+
+
 .btn {
   padding: 16px 32px;
   border-radius: 24px;
